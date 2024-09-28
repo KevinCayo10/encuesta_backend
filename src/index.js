@@ -9,6 +9,12 @@ const port = process.env.PORT || 3000;
 //conectar bd
 conectarBD();
 
+// Permitir todas las solicitudes CORS desde cualquier origen
+app.use(
+  cors({
+    origin: "*", // Permite todas las solicitudes desde cualquier dominio
+  })
+);
 app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({ extends: false }));
