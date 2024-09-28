@@ -9,59 +9,48 @@ const encuestaSchema = mongoose.Schema({
     type: String,
     required: false,
   },
-  tiempoCompra: {
+  tiempoBusqueda: {
+    // Cambiado de tiempoCompra a tiempoBusqueda
     type: String,
     required: false,
   },
-  caracteristicas: {
+  factoresImportantes: {
+    // Cambiado de caracteristicas a factoresImportantes
     type: [String],
     required: false,
   },
   disponibilidad: {
     type: String,
-    default: Date.now,
+    required: false, // Cambiado de default a required
   },
   visualizar: {
     type: String,
-    default: false,
+    required: false,
   },
-  categoria: {
+  categoriasProductos: {
+    // Cambiado de categoria a categoriasProductos
     type: [String],
     required: false,
   },
-  subcategoriaElectrodomesticos: {
-    type: [String],
+  subcategoria: {
+    // Cambiado de subcategoriaElectrodomesticos y otros a subcategoria
+    type: Map,
+    of: String, // Usamos Map para permitir múltiples subcategorías por categoría
     required: false,
   },
-  marcaElectrodomesticos: {
-    type: [String],
+  marca: {
+    // Cambiado de marcaElectrodomesticos y otros a marca
+    type: Map,
+    of: String, // Usamos Map para permitir múltiples marcas por categoría
     required: false,
   },
-  subcategoriaEntretenimiento: {
-    type: [String],
+  otrasSubcategorias: {
+    // Cambiado de subcategoriaEntretenimiento y otros a otrasSubcategorias
+    type: Map,
+    of: String, // Permitir múltiples otras subcategorías
     required: false,
   },
-  marcaEntretenimiento: {
-    type: [String],
-    required: false,
-  },
-  subcategoriaAccesorios: {
-    type: [String],
-    required: false,
-  },
-  marcaAccesorios: {
-    type: [String],
-    required: false,
-  },
-  marcaMoviles: {
-    type: [String],
-    required: false,
-  },
-  marcasComputadoras: {
-    type: [String],
-    required: false,
-  },
-  camparar: {
+  comparar: {
     type: String,
     required: false,
   },
