@@ -81,6 +81,10 @@ const encuestaSchema = mongoose.Schema({
     type: String,
     required: false,
   },
+  fecha: {
+    type: Date,
+    default: Date.now,
+  },
 });
 
 module.exports = mongoose.model("encuesta", encuestaSchema);
