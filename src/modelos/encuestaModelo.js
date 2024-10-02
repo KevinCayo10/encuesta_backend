@@ -5,6 +5,10 @@ const encuestaSchema = mongoose.Schema({
     type: Number,
     required: false,
   },
+  estrato: {
+    type: String,
+    required: false,
+  },
   frecuenciaCompra: {
     type: String,
     required: false,
