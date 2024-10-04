@@ -76,7 +76,11 @@ const encuestaSchema = mongoose.Schema({
   },
   fecha: {
     type: Date,
-    default: () => moment().tz("America/Guayaquil").toDate(), // Aplica la zona horaria correctamente
+    default: () => moment().subtract(5, "hours").toDate(), // Resta 5 horas
+  },
+  fecha_registro: {
+    type: String,
+    required: false,
   },
 });
 
