@@ -49,13 +49,11 @@ const encuestaSchema = mongoose.Schema({
     required: false,
   },
   otrasSubcategorias: {
-    // Cambiado de subcategoriaEntretenimiento y otros a otrasSubcategorias
     type: Map,
     of: String, // Permitir múltiples otras subcategorías
     required: false,
   },
   otrasMarcas: {
-    // Cambiado de subcategoriaEntretenimiento y otros a otrasSubcategorias
     type: Map,
     of: String, // Permitir múltiples otras subcategorías
     required: false,

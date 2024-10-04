@@ -8,6 +8,7 @@ exports.registrar = async (req, res) => {
         .tz("America/Guayaquil")
         .format("YYYY-MM-DD HH:mm:ss"), // Formatea la fecha como string
     });
+
     await encuesta.save();
     res.json({ mensaje: "Encuesta registrada correctamente" });
   } catch (error) {
