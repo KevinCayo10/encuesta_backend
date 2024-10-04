@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-
+const moment = require("moment-timezone");
 const encuestaSchema = mongoose.Schema({
   edad: {
     type: Number,
@@ -76,7 +76,7 @@ const encuestaSchema = mongoose.Schema({
   },
   fecha: {
     type: Date,
-    default: Date.now,
+    default: () => moment().tz("America/Guayaquil").toDate(), // Aplica la zona horaria correctamente
   },
 });
 
