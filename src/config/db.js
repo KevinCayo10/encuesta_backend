@@ -4,8 +4,6 @@ require("dotenv").config({ path: ".env" });
 const conectarBD = async () => {
   try {
     await mongoose.connect(process.env.DB_MONGO, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
       serverSelectionTimeoutMS: 5000, // Tiempo de espera para la selección del servidor
     });
     console.log("Base de datos conectada con éxito");
